@@ -1,0 +1,13 @@
+development:
+  adapter: mysql2
+  database: century21ap
+  host: localhost
+  username: root
+  password: 
+
+production:
+  adapter: mysql2
+  database: century21ap
+  host: localhost
+  username: century21ap
+  password: V@nil!a1cat
