@@ -11,7 +11,7 @@ set :repository,  ".git"
 set :deploy_via, :copy
 
 # The address of the remote host on EC2 (the Public DNS address)
-set :location, "ec2-50-17-70-234.compute-1.amazonaws.com"
+set :location, "ubuntu@ec2-50-17-70-234.compute-1.amazonaws.com"
 # setup some Capistrano roles
 role :app, location
 role :web, location

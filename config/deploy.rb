@@ -1,7 +1,7 @@
 # The name of your app
 set :application, "century21ap"
 # The directory on the EC2 node that will be deployed to
-set :deploy_to, "/rails/#{application}"
+set :deploy_to, "rails/#{application}"
 # The type of Source Code Management system you are using
 set :scm, :git
 # The location of the LOCAL repository relative to the current app
