@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @realtor.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @realtor.last_name %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%= @realtor.phone_number %>
+</p>
+
+<p>
+  <b>Email address:</b>
+  <%= @realtor.email_address %>
+</p>
+
+
+<%= link_to 'Edit', edit_realtor_path(@realtor) %> |
+<%= link_to 'Back', realtors_path %>

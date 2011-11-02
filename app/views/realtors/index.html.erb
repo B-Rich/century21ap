@@ -1,0 +1,29 @@
+<h1>Listing realtors</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Phone number</th>
+    <th>Email address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @realtors.each do |realtor| %>
+  <tr>
+    <td><%= realtor.first_name %></td>
+    <td><%= realtor.last_name %></td>
+    <td><%= realtor.phone_number %></td>
+    <td><%= realtor.email_address %></td>
+    <td><%= link_to 'Show', realtor %></td>
+    <td><%= link_to 'Edit', edit_realtor_path(realtor) %></td>
+    <td><%= link_to 'Destroy', realtor, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Realtor', new_realtor_path %>

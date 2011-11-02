@@ -3,7 +3,7 @@ development:
   database: century21ap_dev
   host: 127.0.0.1
   username: root
-  password: V@nil!a1cat
+  password: V@nil!a1
 
 production:
   adapter: mysql2
