@@ -29,8 +29,13 @@ ActiveRecord::Schema.define(:version => 20111102021858) do
   create_table "realtors", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "phone_number"
+    t.boolean  "hablo_espanol"
+    t.string   "title"
+    t.integer  "license"
+    t.integer  "extension"
+    t.string   "cell_number"
     t.string   "email_address"
+    t.string   "gender"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

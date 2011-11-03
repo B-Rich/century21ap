@@ -1,3 +1,0 @@
-ActiveAdmin.register Listing do
-  has_attached_file :pictures, :styles => { :full => "805x605>", :thumb => "154x109>" }
-end

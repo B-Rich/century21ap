@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :realtor %><br />
-    <%= select("listing", "realtor_id", Realtor.all.collect {|r| [ r.first_name, r.id ] }) %>
+    <%= select("listing", "realtor_id", Realtor.all.collect {|r| [ r.full_name, r.id ] }) %>
   </div>
   <div class="field">
     <%= f.label :description %><br />
