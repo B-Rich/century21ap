@@ -9,7 +9,6 @@
     <th>Status</th>
     <th>MLS Number</th>
     <th>Description</th>
-    <th>Realtor</th>
     <th></th>
     <th></th>
     <th></th>
@@ -24,7 +23,6 @@
     <td><%= listing.status %></td>
     <td><%= listing.mls_number %></td>
     <td><%= listing.description %></td>
-    <td><%= listing.realtor %></td>
     <td><%= link_to 'Show', listing %></td>
     <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
     <td><%= link_to 'Destroy', listing, confirm: 'Are you sure?', method: :delete %></td>
