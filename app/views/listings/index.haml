@@ -1,4 +1,4 @@
-%h1 Listing
+%h1 Homes for Sale
 
 %table
   %tr
@@ -25,10 +25,6 @@
       %td= listing.mls_number 
       %td= listing.description 
       %td= listing.realtor 
-      %td= link_to 'Show', listing 
-      %td= link_to 'Edit', edit_listing_path(listing) 
-      %td= link_to 'Destroy', listing, confirm: 'Are you sure?', method: :delete 
 
 %br
 
-= link_to 'New Listing', new_listing_path 

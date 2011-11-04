@@ -8,6 +8,15 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %p.notice= notice
-    %p.alert= alert
-    = yield
+    .container
+      = image_tag "realtorslogo.jpg"
+      .nav
+        = image_tag "realtors.gif"
+        = image_tag "listings.gif"
+        = image_tag "about.gif"
+        = image_tag "contact.gif"
+        = image_tag "realtorsbottom.jpg"
+      .clear
+      / %p.notice= notice
+      / %p.alert= alert
+      #content= yield
