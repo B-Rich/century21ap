@@ -1,4 +1,8 @@
 Century21ap::Application.routes.draw do
+  resources :types
+
+  resources :statuses
+
   resources :realtors
 
   resources :listings
