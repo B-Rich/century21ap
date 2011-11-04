@@ -2,6 +2,7 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
+    @page_title = "Listings"
     @listings = Listing.all
 
     respond_to do |format|

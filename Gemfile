@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'haml-rails'
 gem 'mysql2'
 gem 'paperclip'
 gem 'rails', '3.1.1'

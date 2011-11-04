@@ -1,0 +1,33 @@
+%h1 Listing
+
+%table
+  %tr
+    %th Address
+    %th City
+    %th Zip Code
+    %th Price
+    %th Status
+    %th MLS Number
+    %th Description
+    %th Realtor
+    %th 
+    %th 
+    %th 
+
+  - @listings.each do |listing| 
+    %tr
+      %td= listing.address 
+      %td= listing.city 
+      %td= listing.zip_code 
+      %td= listing.price 
+      %td= listing.status 
+      %td= listing.mls_number 
+      %td= listing.description 
+      %td= listing.realtor 
+      %td= link_to 'Show', listing 
+      %td= link_to 'Edit', edit_listing_path(listing) 
+      %td= link_to 'Destroy', listing, confirm: 'Are you sure?', method: :delete 
+
+%br
+
+= link_to 'New Listing', new_listing_path 
