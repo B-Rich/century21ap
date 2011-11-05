@@ -26,6 +26,7 @@ class ListingsController < ApplicationController
   # GET /listings/new.json
   def new
     @listing = Listing.new
+    10.times { @listing.house_images.build }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,6 +37,7 @@ class ListingsController < ApplicationController
   # GET /listings/1/edit
   def edit
     @listing = Listing.find(params[:id])
+    10.times { @listing.house_images.build }
   end
 
   # POST /listings
