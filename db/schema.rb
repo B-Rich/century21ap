@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20111105190333) do
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
   create_table "house_images", :force => true do |t|
+    t.string   "caption"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"

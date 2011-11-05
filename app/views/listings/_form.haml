@@ -46,6 +46,15 @@
     = f.label :description
     %br
     = f.text_area :description
+    
+  - f.fields_for :house_images do |builder|
+    - if builder.object.new_record?
+      .field
+        = builder.label :caption, "Image Caption"
+        = builder.text_field :caption
+      .field
+        = builder.label :photo, "Image File"
+        = builder.text_field :photo
 
   .actions
     = f.submit
