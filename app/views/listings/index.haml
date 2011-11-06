@@ -1,30 +1,17 @@
 %h1 Homes for Sale
 
-%table
-  %tr
-    %th Address
-    %th City
-    %th Zip Code
-    %th Price
-    %th Status
-    %th Type
-    %th MLS Number
-    %th Description
-    %th Realtor
-    %th 
-    %th 
-    %th 
-
-  - @listings.each do |listing| 
-    %tr
-      %td= listing.address 
-      %td= listing.city 
-      %td= listing.zip_code 
-      %td= listing.price 
-      %td= listing.status 
-      %td= listing.mls_number 
-      %td= listing.description 
-      %td= listing.realtor 
-
-%br
-
+- @listings.each do |listing|
+  - @realtor = Realtor.find_by_id(listing.realtor_id)
+  .left
+    .left
+      %b
+        = listing.address + ', ' + listing.city
+        %br
+        = number_to_currency(listing.price, :precision => 0)
+      %br
+        MLS:
+        = listing.mls_number 
+      = listing.description 
+    Contact: 
+    = @realtor.full_name + ' - ' 
+    = @realtor.cell_number rescue ''
