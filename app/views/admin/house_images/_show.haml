@@ -1,0 +1,10 @@
+.panel
+  %h3= Listing.find_by_id(@house_image.listing_id).address
+  .panel_contents
+    = image_tag('/system/photos/' + @house_image.id.to_s + '/large/' + @house_image.photo_file_name)
+    %br
+    .attributes_table
+      %table
+        %tr
+          %th Caption
+          %td= @house_image.caption
