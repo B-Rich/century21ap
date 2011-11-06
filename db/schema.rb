@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20111105190333) do
 
   create_table "house_images", :force => true do |t|
     t.string   "caption"
+    t.integer  "listing_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"
