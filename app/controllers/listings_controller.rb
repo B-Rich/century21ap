@@ -3,7 +3,7 @@ class ListingsController < ApplicationController
   # GET /listings.json
   def index
     @page_title = "Listings"
-    @listings = Listing.all
+    @listings = ListingDecorator.all
 
     respond_to do |format|
       format.html # index.html.erb

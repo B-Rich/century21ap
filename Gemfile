@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'activeadmin'
+gem 'draper', '> 0.8.1'
 gem 'haml-rails'
 gem 'mysql2'
 gem 'paperclip'

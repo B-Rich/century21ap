@@ -16,9 +16,7 @@
         = listing.address + ', ' + listing.city
         %br
         = number_to_currency(listing.price, :precision => 0)
-        %br
-        MLS:
-        = listing.mls_number
+        = raw(listing.mls)
       = listing.description 
     .contact
       Contact: 
