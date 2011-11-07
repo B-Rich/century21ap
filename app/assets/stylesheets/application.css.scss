@@ -20,6 +20,7 @@ body,div,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,blockquote,th,td,img
 	color: #F2B001;
 	font-size: 17px;
 	font-weight: bold;
+	text-align: center;
 }
 
 .container {
@@ -40,7 +41,8 @@ body,div,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,blockquote,th,td,img
 .desc {
 	float: left;
 	font-size: 13px;
-	width: 400px;
+	text-transform: uppercase;
+	width: 300px;
 }
 
 .image {
@@ -52,6 +54,7 @@ body,div,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,blockquote,th,td,img
 .listing {
 	float: left;
 	line-height: 20px;
+	width: 485px;
 }
 
 .nav {
@@ -65,4 +68,5 @@ body,div,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,blockquote,th,td,img
 .titles {
 	font-size: 17px;
 	font-weight: bold;
+	text-transform: capitalize;
 }

@@ -5,7 +5,12 @@
   - @house_images = HouseImage.find_by_listing_id(listing.id)
   .listing
     .image
-      = image_tag('/system/photos/' + @house_images.id.to_s + '/thumb/' + @house_images.photo_file_name)
+      - if @house_images != nil 
+        - house = '/system/photos/' + @house_images.id.to_s + '/thumb/' + @house_images.photo_file_name
+        = image_tag(house.to_s)
+      - else
+        = image_tag('nopic.gif')
+      
     .desc
       .titles
         = listing.address + ', ' + listing.city
