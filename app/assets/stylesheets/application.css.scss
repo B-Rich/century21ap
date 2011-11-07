@@ -15,6 +15,13 @@ body,div,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,blockquote,th,td,img
 	clear: both;
 }
 
+.contact {
+	clear: both;
+	color: #F2B001;
+	font-size: 17px;
+	font-weight: bold;
+}
+
 .container {
 	font-family: Trebuchet MS;
 	margin: 3px auto;
@@ -30,10 +37,32 @@ body,div,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,blockquote,th,td,img
 	width: 972px;
 }
 
+.desc {
+	float: left;
+	font-size: 13px;
+	width: 400px;
+}
+
+.image {
+	float: left;
+	margin-right: 10px;
+	width: 160px;
+}
+
+.listing {
+	float: left;
+	line-height: 20px;
+}
+
 .nav {
 	clear: both;
 	img {
 		display: inline;
 		float: left;
 	}
+}
+
+.titles {
+	font-size: 17px;
+	font-weight: bold;
 }

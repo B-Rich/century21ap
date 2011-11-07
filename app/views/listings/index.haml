@@ -1,17 +1,21 @@
 %h1 Homes for Sale
 
 - @listings.each do |listing|
-  - @realtor = Realtor.find_by_id(listing.realtor_id)
-  .left
-    .left
-      %b
+  - @realtor = Realtor.find_by_id(listing.realtor)
+  - @house_images = HouseImage.find_by_listing_id(listing.id)
+  .listing
+    .image
+      = image_tag('/system/photos/' + @house_images.id.to_s + '/thumb/' + @house_images.photo_file_name)
+    .desc
+      .titles
         = listing.address + ', ' + listing.city
         %br
         = number_to_currency(listing.price, :precision => 0)
-      %br
+        %br
         MLS:
-        = listing.mls_number 
+        = listing.mls_number
       = listing.description 
-    Contact: 
-    = @realtor.full_name + ' - ' 
-    = @realtor.cell_number.length > 2 ? @realtor.cell_number : moniker(:office_number) + ' ext: ' + @realtor.extension.to_s
+    .contact
+      Contact: 
+      = @realtor.full_name + ' - ' 
+      = @realtor.cell_number.length > 2 ? @realtor.cell_number : moniker(:office_number) + ' ext: ' + @realtor.extension.to_s
