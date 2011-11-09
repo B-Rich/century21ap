@@ -1,14 +1,13 @@
 source 'http://rubygems.org'
 
+gem 'activeadmin'
+gem 'draper', '> 0.8.1'
+gem 'haml-rails'
+gem 'mysql2'
+gem 'paperclip'
 gem 'rails', '3.1.1'
 gem 'therubyracer'
 gem 'thin'
-
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-gem 'mysql2'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,9 +21,6 @@ gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
 
 # Deploy with Capistrano
 gem 'capistrano'

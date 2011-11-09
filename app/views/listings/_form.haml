@@ -1,0 +1,60 @@
+= form_for @listing, :html => { :multipart => true } do |f|
+  - if @listing.errors.any?
+    #error_explanation
+      %h2= pluralize(@listing.errors.count, "error") prohibited this listing from being saved:
+
+      %ul
+        - @listing.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :address
+    %br
+    = f.text_field :address
+
+  .field
+    = f.label :city
+    %br
+    = f.text_field :city
+
+  .field
+    = f.label :zip_code
+    %br
+    = f.text_field :zip_code
+
+  .field
+    = f.label :price
+    %br
+    = f.text_field :price
+
+  .field
+    = f.label :status
+    %br
+    = f.text_field :status
+
+  .field
+    = f.label 'MLS Number'
+    %br
+    = f.text_field :mls_number
+
+  .field
+    = f.label :realtor
+    %br
+    = select("listing", "realtor_id", Realtor.all.collect {|r| [ r.full_name, r.id ] })
+
+  .field
+    = f.label :description
+    %br
+    = f.text_area :description
+    
+  - f.fields_for :house_images do |builder|
+    - if builder.object.new_record?
+      .field
+        = builder.label :caption, "Image Caption"
+        = builder.text_field :caption
+      .field
+        = builder.label :photo, "Image File"
+        = builder.text_field :photo
+
+  .actions
+    = f.submit

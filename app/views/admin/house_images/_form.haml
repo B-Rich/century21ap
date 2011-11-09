@@ -1,0 +1,6 @@
+= semantic_form_for [:admin, @house_image] do |f|
+  = f.inputs do
+    = f.input :listing, :as => :select, :collection => Listing.all.collect {|l| [ l.address, l.id ] }
+    = f.input :photo
+    = f.input :caption
+  = f.buttons :commit

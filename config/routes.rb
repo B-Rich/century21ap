@@ -1,7 +1,15 @@
 Century21ap::Application.routes.draw do
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+  resources :types
+
+  resources :statuses
+
   resources :realtors
 
-  resources :listings
+  resources :listings, :except => [:destroy, :show, :update]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -52,7 +60,7 @@ Century21ap::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'listings#index'
 
   # See how all your routes lay out with "rake routes"
 
