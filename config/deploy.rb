@@ -3,7 +3,7 @@ set :repository,  "wim@wim.webfactional.com:repos/century21ap.git"
 set :deploy_to, "/home/ubuntu/rails/century21ap"
 set :scm, :git
 
-set :location, "ec2-107-22-47-49.compute-1.amazonaws.com"
+set :location, "ec2-184-73-195-7.compute-1.amazonaws.com"
 role :web, location                          # Your HTTP server, Apache/etc
 role :app, location                          # This may be the same as your `Web` server
 role :db,  location, :primary => true # This is where Rails migrations will run
@@ -14,8 +14,8 @@ default_run_options[:pty] = true
 
 set :rvm_type, :user
 
-# Note that you must push your public key to the server
-# scp -i ~/.ssh/jack_ht.pem  ~/.ssh/id_rsa.pub ubuntu@ec2-107-22-47-49.compute-1.amazonaws.com:.ssh/authorized_keys2
+# Note that you must push your public key (id_rsa.pub) to the server
+# scp -i ~/.ssh/watsonkey.pem  ~/.ssh/id_rsa.pub ubuntu@ec2-184-73-195-7.compute-1.amazonaws.com:.ssh/authorized_keys2
 
 $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
 
