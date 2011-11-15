@@ -1,5 +1,5 @@
 module ApplicationHelper
-  FILE = Rails.root.join('config', 'century21ap.yml')
+  FILE = Rails.root.join('config', 'century21ap_monikers.yml')
   YAML = YAML.load_file(FILE)
   
   %w(moniker).each do |method|

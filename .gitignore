@@ -23,4 +23,5 @@ mkmf.log
 public/system
 vendor/old_plugins
 config/database.yml.mine
+config/database.yml
 *~
