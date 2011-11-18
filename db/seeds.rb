@@ -5,4 +5,19 @@ realtors = [
 
 realtors.each do |realtor|
   Realtor.create(realtor)
+  print 'R'
+end
+
+statuses = [ { :name => 'Price Reduced!!!' }, { :name => 'Sale Pending!!!' } ]
+
+statuses.each do |status|
+  Status.create(status)
+  print 'S'
+end
+
+types = [ { :name => 'For Sale' }, { :name => 'For Rent' } ]
+
+types.each do |type|
+  Type.create(type)
+  print 'T'
 end
