@@ -8,6 +8,7 @@ class CreateListings < ActiveRecord::Migration
       t.string     :status
       t.integer    :mls_number
       t.text       :description
+      t.string     :status
       t.belongs_to :realtor
       t.timestamps
     end

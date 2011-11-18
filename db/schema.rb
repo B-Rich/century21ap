@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(:version => 20111105190333) do
 
   create_table "statuses", :force => true do |t|
     t.string   "name"
+    t.integer  "listing_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
