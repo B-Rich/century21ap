@@ -37,6 +37,7 @@ namespace :deploy do
   task :restart do
     run "ln -s #{deploy_to}/shared/config/database.yml #{deploy_to}/current/config/database.yml"
     run "ln -s #{deploy_to}/shared/config/century21ap.yml #{deploy_to}/current/config/century21ap.yml"
+    run "cd #{deploy_to}/current"
     run "sudo /etc/init.d/thin restart"
     run "sudo nginx -s reload"
   end
