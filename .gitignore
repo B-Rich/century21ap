@@ -4,13 +4,11 @@ log/*.log
 tmp/
 .sass-cache/
 Gemfile.lock
-*~
 watsonint
 
 .DS_Store
 TRASH*
 .rvmrc
-config/database.yml
 db/schema.rb
 xtmp/**/*
 coverage
