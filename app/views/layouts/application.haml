@@ -9,13 +9,13 @@
     = csrf_meta_tags
   %body
     .container
-      = image_tag "realtorslogo.jpg"
+      = link_to image_tag("realtorslogo.jpg", :border => 0), "http://www.century21ap.com"
       .nav
-        = image_tag "realtors.gif"
-        = image_tag "listings.gif"
-        = image_tag "about.gif"
-        = image_tag "contact.gif"
-        = image_tag "realtorsbottom.jpg"
+        = link_to image_tag("realtors.gif", :border => 0), "http://www.century21ap.com/realtors.html"
+        = link_to image_tag("listings.gif", :border => 0), "/"
+        = link_to image_tag("about.gif", :border => 0), "http://www.century21ap.com/about.html"
+        = link_to image_tag("contact.gif", :border => 0), "http://www.century21ap.com/contact.html"
+        = link_to image_tag("realtorsbottom.jpg", :border => 0), "http://www.century21ap.com/spanish.html"
       .clear
       / %p.notice= notice
       / %p.alert= alert

@@ -22,7 +22,7 @@
   .field
     = f.label :status
     %br
-    = select("listing", "status_id", Status.all.collect {|s| [ s.name, s.id ] })
+    = select("status", "status_id", Status.all.collect {|s| [ s.name, s.id ] })
 
   .field
     = f.label 'MLS Number'

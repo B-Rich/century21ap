@@ -1,38 +1,45 @@
 source 'http://rubygems.org'
 
 gem 'activeadmin'
-gem 'draper', '> 0.8.1'
+gem 'authlogic'
+gem 'aws-s3'
+gem 'aws-sdk'
+gem 'capistrano'
+gem 'draper'
+gem 'exception_notification'
 gem 'haml-rails'
+gem 'jquery-rails'
 gem 'mysql2'
 gem 'paperclip'
-gem 'rails', '3.1.1'
-gem 'therubyracer'
+gem 'rails'
+gem 'rvm-capistrano'
 gem 'thin'
 
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'coffee-rails'
+  gem 'sass-rails'
+  gem 'therubyracer', :platforms => :ruby
+  gem 'uglifier'
 end
 
-###########################################################################
-# This gem was moved out of :assets because it was causing the thin server to fail when in production mode
-gem 'sass-rails',   '~> 3.1.4'
-############################################################################
+group :development, :test do
+  gem 'capistrano_colors'
+  gem 'capistrano-ext'
+  gem 'guard-rspec'
+  gem 'jasmine'
+  gem 'pry'
+  gem 'ruby-debug19'
+  gem 'thin'
+  gem 'spork'
+end
 
-gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Deploy with Capistrano
-gem 'capistrano'
-
-# To use debugger
-gem 'ruby-debug19', :require => 'ruby-debug'
+group :production, :staging do
+  gem 'unicorn'
+end
 
 group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
 end

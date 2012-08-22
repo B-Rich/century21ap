@@ -1,4 +1,4 @@
-set :application, "miconecta"
+set :application, "century21ap"
 set :repository,  "wim@wim.webfactional.com:repos/century21ap.git"
 set :deploy_to, "/home/ubuntu/rails/century21ap"
 set :scm, :git
