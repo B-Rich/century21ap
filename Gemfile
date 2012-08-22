@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
 
-gem 'activeadmin'
 gem 'authlogic'
 gem 'aws-s3'
 gem 'aws-sdk'
